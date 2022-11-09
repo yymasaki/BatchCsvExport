@@ -1,6 +1,7 @@
 package com.example.demo.config;
 
 import java.io.File;
+import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
@@ -27,7 +28,7 @@ public class SampleProperty {
 	 * ファイルパス生成
 	 */
 	public String outputPath() {
-		String outputPath = fileOutputDirectory + File.separator + fileName;
+		String outputPath = fileOutputDirectory + File.separator + fileName + LocalDate.now() + ".csv";
 		log.debug("outputPath={}", outputPath);
 		return outputPath;
 	}

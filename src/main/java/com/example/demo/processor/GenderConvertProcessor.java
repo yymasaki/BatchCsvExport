@@ -8,8 +8,7 @@ import com.example.demo.domain.model.Employee;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Component("GenderConvertProcessor")
-@StepScope
+@Component
 @Slf4j
 public class GenderConvertProcessor implements ItemProcessor<Employee, Employee> {
 
